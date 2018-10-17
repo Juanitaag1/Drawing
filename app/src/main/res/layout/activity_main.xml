@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:orientation="vertical" >
-
+<!--a custom view ch 5 the next line is for the custom view using url in reverse-->
     <edu.cascadia.brianb.mydrawing.SimplyDrawnView
         android:id="@+id/mycanvas"
         android:layout_width="match_parent"

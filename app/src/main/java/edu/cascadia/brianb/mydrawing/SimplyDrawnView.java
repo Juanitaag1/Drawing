@@ -45,21 +45,43 @@ public class SimplyDrawnView extends View {
 
         //TODO: Finish drawing red line
         mPaint.setColor(Color.RED); mPaint.setStrokeWidth(10);
+        canvas.drawLine(100,100,300, mHeight, mPaint);
 
         //TODO: Draw green lines
-
+        mPaint.setColor(Color.GREEN);
+        mPaint.setStrokeWidth(20);
+        canvas.drawLine(0,50,mWidth,50,mPaint);
+        canvas.drawLine(0,100,mWidth,100,mPaint);
+        canvas.drawLine(0,150,mWidth,150,mPaint);
         //TODO: Draw Text
+        mPaint.setColor(Color.BLUE);
+        mPaint.setStrokeWidth(50);
+        mPaint.setTextSize(50);
+        canvas.drawText("I am drawing This", 250, 300, mPaint);
+
 
         //TODO: Draw Text on a Path
+        mPaint.setColor(Color.BLACK);
+        mPaint.setStrokeWidth(10);
+        mPaint.setTextSize(50);
+        Path myPath = new Path();
+        myPath.addArc(50, 300, 400,550,0,180);
+canvas.drawTextOnPath("Drawing on a path is lots of fun",myPath,10,10, mPaint);
+
 
         //TODO: Draw filled, opaque, and open ovals
 
         //TODO: Draw bee bitmap
         //     HINT: since b is a Drawable, you can use its .draw method, but .setBounds on it first
         Drawable b = getResources().getDrawable(R.drawable.bee,null);
+        b.setBounds(150,400,500,700);
+        b.draw(canvas);
+
 
         //TODO: Add another image to the project (copy and paste to Android Studio res/drawable folder)
         //     and draw it on the screen
-
+      //  Drawable l = getResources().getDrawable(R.drawable.Loki_first_pic,null);
+     //   l.setBounds(500,600,800,900);
+     //   l.draw(canvas);
     }
 }
