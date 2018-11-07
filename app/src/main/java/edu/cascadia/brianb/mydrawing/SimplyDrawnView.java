@@ -10,6 +10,7 @@ import android.graphics.Path;
 import android.graphics.PathDashPathEffect;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.ShapeDrawable;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -70,6 +71,17 @@ canvas.drawTextOnPath("Drawing on a path is lots of fun",myPath,10,10, mPaint);
 
 
         //TODO: Draw filled, opaque, and open ovals
+
+        mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setColor(Color.BLACK);
+        RectF oval = new RectF(500, 1500, 900, 2000);
+        canvas.drawOval(oval, mPaint);
+
+        mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setColor(Color.BLACK);
+        mPaint.setStrokeWidth(500);
+        RectF ovalFill = new RectF(900, 900, 1200, 1200);
+        canvas.drawOval(ovalFill, mPaint);
 
         //TODO: Draw bee bitmap
         //     HINT: since b is a Drawable, you can use its .draw method, but .setBounds on it first
