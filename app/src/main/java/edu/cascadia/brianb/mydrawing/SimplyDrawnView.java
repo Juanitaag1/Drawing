@@ -80,8 +80,8 @@ canvas.drawTextOnPath("Drawing on a path is lots of fun",myPath,10,10, mPaint);
 
         //TODO: Add another image to the project (copy and paste to Android Studio res/drawable folder)
         //     and draw it on the screen
-      //  Drawable l = getResources().getDrawable(R.drawable.Loki_first_pic,null);
-     //   l.setBounds(500,600,800,900);
-     //   l.draw(canvas);
+      Drawable l = getResources().getDrawable(R.drawable.loki,null);
+      l.setBounds(500,600,800,900);
+      l.draw(canvas);
     }
 }
